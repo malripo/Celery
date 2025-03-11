@@ -1,0 +1,25 @@
+{% extends 'layouts/b.html' %}
+
+{% block content %}
+
+<h1>Ajax methods</h1>
+<div class="card p-8 !pb-10">
+    <ul class="hoverlist [&>li>*]:font-bold [&>li>*]:text-2xl">
+        <li><a href="{% url 'vanilla' %}">Vanilla</a></li>
+        <li><a href="{% url 'fetch' %}">Fetch</a></li>
+        <li><a href="{% url 'fetchawait' %}">Fetch Await</a></li>
+        <li><a href="{% url 'axios' %}">Axios</a></li>
+        <li><a href="{% url 'jQuery' %}">jQuery</a></li>
+        <li><a href="{% url 'htmx' %}">Htmx</a></li>
+    </ul>
+</div>
+
+{% endblock %}
+
+{% block library %}
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
+
+    
