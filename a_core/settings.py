@@ -171,7 +171,6 @@ else:
         "default": {
             "BACKEND": "channels_redis.core.RedisChannelLayer",
             "CONFIG": {
-                # "hosts": [('redis://default:QFDwYIFVridTMLTbIiVvqEXHbsQVvOWi@yamabiko.proxy.rlwy.net:10275')],  # <=railway(malripo) [real_chat_redis]
                 "hosts": [(env('REDIS_URL'))],
             },
         },
