@@ -41,7 +41,7 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-site_domain = env('RAILWAY_PUNLIC_DOMAIN', default='')
+# site_domain = env('RAILWAY_PUNLIC_DOMAIN', default='')
 
 if ENVIRONMENT == "development":
     # ALLOWED_HOSTS = []
@@ -52,8 +52,8 @@ else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'celery-production-155c.up.railway.app']
     CSRF_TRUSTED_ORIGINS = [ 'https://celery-production-155c.up.railway.app' ]
 
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1', site_domain]
-    CSRF_TRUSTED_ORIGINS = [ f'https://{site_domain}']    
+    # ALLOWED_HOSTS = ['localhost', '127.0.0.1', site_domain]
+    # CSRF_TRUSTED_ORIGINS = [ f'https://{site_domain}']    
 
 INTERNAL_IPS = (
     '127.0.0.1',
