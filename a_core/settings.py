@@ -288,8 +288,7 @@ if ENVIRONMENT == "development":
     CELERY_BROKER_URL = 'redis://localhost:6379/0' 
 else:
     CELERY_BROKER_URL = env('REDIS_URL')
+          
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_RESULT_EXTENDED = True
-
-
