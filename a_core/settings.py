@@ -41,13 +41,14 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-# ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
-# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'postchatdaphneredis.onrender.com']
-
-CSRF_TRUSTED_ORIGINS = [ 'https://*' ]
-# CSRF_TRUSTED_ORIGINS = [ 'https://postchatdaphneredis.onrender.com' ]
+if ENVIRONMENT == "development":
+    # ALLOWED_HOSTS = []
+    # ALLOWED_HOSTS = ["*"]
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
+    CSRF_TRUSTED_ORIGINS = [ 'https://*' ]
+else:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'celery-production-155c.up.railway.app']
+    CSRF_TRUSTED_ORIGINS = [ 'https://celery-production-155c.up.railway.app' ]
 
 INTERNAL_IPS = (
     '127.0.0.1',
